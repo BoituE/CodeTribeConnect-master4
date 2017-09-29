@@ -11,20 +11,13 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.google.firebase.database.ChildEventListener;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by RP on 2017/09/02.
@@ -66,6 +59,7 @@ public class UserProfileEditorActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activityupdateprofile2);
+
         mDatabaseReference = FirebaseDatabase.getInstance().getReference().child("verified_user_profile");
         mStoragereference = FirebaseStorage.getInstance().getReference()
                 .child("verified_user_profile_photos");
@@ -78,9 +72,15 @@ public class UserProfileEditorActivity extends AppCompatActivity {
         mStatusSpinner = (Spinner) findViewById(R.id.spinner_status);
 
 
+
+
+
+
         userUpdateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+
 
                 ActiveUser items = new ActiveUser();
                 items.setActiveUserName(userNameEditText.getText().toString());
@@ -98,6 +98,14 @@ public class UserProfileEditorActivity extends AppCompatActivity {
                 userEmailEditText.setText("");
                 userPhoneNumber.setText("");
                 Toast.makeText(UserProfileEditorActivity.this, "Information saved...",Toast.LENGTH_SHORT).show();
+
+
+
+
+
+
+
+
 
             }
         });

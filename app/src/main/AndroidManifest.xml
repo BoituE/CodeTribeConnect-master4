@@ -24,7 +24,8 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity"/></activity>
-        <activity android:name=".UserProfileEditorActivity"/>
+        <activity android:name=".UserProfileEditorActivity" />
+
         <activity android:name=".EmailPasswordActivity"/>
         <activity android:name=".Tribe_DialogActivity"
             android:parentActivityName=".MainActivity">
