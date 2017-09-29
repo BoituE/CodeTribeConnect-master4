@@ -14,13 +14,16 @@ public  class CategoryAdapter extends FragmentPagerAdapter {
     @Override
     public CharSequence getPageTitle(int position) {
         if (position == 0){
-
-            return context.getString(R.string.codeTribes);
-        }else if (position == 1){
-
-            return context.getString(R.string.chat);
-        }else{
             return context.getString(R.string.portfolio);
+
+
+        }else if (position == 1){
+            return context.getString(R.string.codeTribes);
+
+
+        }else{
+            return context.getString(R.string.chat);
+
         }
     }
 
@@ -32,11 +35,11 @@ public  class CategoryAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         if (position == 0){
-            return new CodeTribesFragment();
+            return new PortfolioFragment();
         }else if (position == 1){
-            return  new TribeChatFragment();
+            return  new CodeTribesFragment();
         }else{
-            return  new PortfolioFragment();
+            return  new TribeChatFragment();
         }
     }
 

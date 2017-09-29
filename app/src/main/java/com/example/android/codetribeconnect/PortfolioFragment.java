@@ -7,7 +7,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.firebase.database.ChildEventListener;
@@ -18,7 +17,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
-import org.w3c.dom.Text;
+import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
  * Created by RP on 2017/09/02.
@@ -33,7 +32,7 @@ public class PortfolioFragment extends Fragment {
     private TextView profileSurname;
     private TextView profilePhoneNumber;
     private TextView profileEmail;
-    private Button editProfile;
+    private CircleImageView profileEdit;
     private TextView profileStatus;
     private TextView profileOccupation;
     ChildEventListener mChildEventListener;
@@ -46,21 +45,23 @@ public class PortfolioFragment extends Fragment {
         mFirebaseStorage = FirebaseStorage.getInstance();
         mDatabaseReference = mFirebaseDatabase.getReference().child("verified_user_profile");
         mStorageReference = mFirebaseStorage.getReference().child("verified_user_profile_photos");
+
         profileName = rootView.findViewById(R.id.profile_name);
         profileSurname = rootView.findViewById(R.id.profileSurname);
         profilePhoneNumber = rootView.findViewById(R.id.profile_mobile);
         profileEmail = rootView.findViewById(R.id.profile_email);
-        editProfile = rootView.findViewById(R.id.edit_profile);
         profileStatus = rootView.findViewById(R.id.userStatus);
         profileOccupation = rootView.findViewById(R.id.occupation);
-        editProfile.setOnClickListener(new View.OnClickListener() {
+        profileEdit = rootView.findViewById(R.id.profile_edit);
+
+        profileEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(),UserProfileEditorActivity.class);
                 startActivity(intent);
             }
         });
-        mChildEventListener = new ChildEventListener() {
+        mChildEventListener = new ChildEventListener(){
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                 ActiveUser activeUser = dataSnapshot.getValue(ActiveUser.class);
@@ -76,7 +77,6 @@ public class PortfolioFragment extends Fragment {
 
             @Override
             public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-
 
 
             }

@@ -35,7 +35,7 @@ public class ActiveUsersAdapterActivity extends ArrayAdapter<ActiveUser> {
         TextView activeUserName = listItemView.findViewById(R.id.activeUserName);
         TextView activeUserSurname = listItemView.findViewById(R.id.activeUserSurname);
         TextView activeUserStatus = listItemView.findViewById(R.id.activeUserStatus);
-        ImageView activeUserImage = listItemView.findViewById(R.id.activeUserImage);
+        ImageView activeUserImage = listItemView.findViewById(R.id.profile_image);
         ActiveUser activeUser = getItem(position);
         boolean isImage = activeUser.getActiveUserImageUrl() != null;
         if (isImage){

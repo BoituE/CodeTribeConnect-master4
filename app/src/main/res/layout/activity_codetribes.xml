@@ -1,22 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/bgt">
+    android:background="#E0E0E0">
 
-
-    <Button
-        android:id="@+id/codeTribe_soweto"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:text="CODETRIBE SOWETO"
-        android:layout_weight="1"
-        android:background="@drawable/green_orange"
-        android:layout_margin="8dp"
-        android:textStyle="bold" />
 
     <Button
         android:id="@+id/codeTribe_pretoria"
@@ -24,7 +15,7 @@
         android:layout_height="80dp"
         android:text="CODETRIBE PRETORIA"
         android:layout_weight="1"
-        android:background="@drawable/border2"
+        android:background="@drawable/tribes1"
         android:layout_margin="8dp"
         android:textStyle="bold"/>
 
@@ -35,7 +26,17 @@
         android:text="CODETRIBE ALEXANDRA"
         android:layout_weight="1"
         android:layout_margin="8dp"
-        android:background="@drawable/green_orange"
+        android:background="@drawable/tribes1"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/codeTribe_soweto"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_margin="8dp"
+        android:layout_weight="1"
+        android:background="@drawable/tribes1"
+        android:text="CODETRIBE SOWETO"
         android:textStyle="bold" />
 
     <Button
@@ -44,7 +45,7 @@
         android:layout_height="80dp"
         android:text="CODETRIBE TEMBISA"
         android:layout_weight="1"
-        android:background="@drawable/border2"
+        android:background="@drawable/tribes1"
         android:layout_margin="8dp"
         android:textStyle="bold" />
 

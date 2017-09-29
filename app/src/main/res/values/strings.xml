@@ -83,6 +83,11 @@
     <!-- Label for dropdown menu option if the pet is female [CHAR LIMIT=20] -->
     <string name="status_intern">Intern</string>
     <string name="status_unknown">Unknown</string>
+    <string name="portfolio_text">
+        Description of what the user has
+        been doing in a single year.
+
+    </string>
 
 
 </resources>

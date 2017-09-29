@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:layout_alignParentTop="true"
-    android:layout_alignParentStart="true"
-    android:background="@drawable/bgt"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_alignParentLeft="true">
+    android:layout_height="match_parent">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -102,14 +96,14 @@
                                 android:textColor="#000"
                                 android:textStyle="bold"/>
 
-                            <TextView
-                                android:id="@+id/profile_name"
+                            <EditText
+                                android:id="@+id/name_editView"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:textColor="#000"
                                 android:gravity="center"
-                                android:text="Kratos"/>
+                                android:hint="eg. Kratos"/>
 
 
                         </LinearLayout>
@@ -132,14 +126,14 @@
                             android:textColor="#000"
                             android:textStyle="bold"/>
 
-                        <TextView
+                        <EditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:textColor="#000"
-                            android:id="@+id/profileSurname"
+                            android:id="@+id/surnameEditText"
                             android:gravity="center"
-                            android:text="War" />
+                            android:hint="e.g War" />
 
                     </LinearLayout>
 
@@ -158,14 +152,13 @@
                             android:text="Status"
                             android:textStyle="bold"/>
 
-                        <TextView
+                        <Spinner
+                            android:id="@+id/spinner_status"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:paddingRight="16dp"
                             android:layout_weight="1"
-                            android:gravity="center"
-                            android:id="@+id/userStatus"
-                            android:textColor="#000"
-                            android:text="Intern" />
+                            android:spinnerMode="dropdown" />
 
 
                     </LinearLayout>
@@ -185,14 +178,14 @@
                             android:text="Current Occupation"
                             android:textStyle="bold"/>
 
-                        <TextView
+                        <EditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:textColor="#000"
-                            android:id="@+id/occupation"
-                            android:text="Developer" />
+                            android:id="@+id/occpateEditText"
+                            android:hint="e.g Developer" />
 
 
                     </LinearLayout>
@@ -212,14 +205,14 @@
                             android:text="Cell Number"
                             android:textStyle="bold"/>
 
-                        <TextView
+                        <EditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:id="@+id/profile_mobile"
+                            android:id="@+id/cell_editTextView"
                             android:textColor="#000"
-                            android:text="011 984 4608" />
+                            android:hint="e.g 011 984 4608" />
 
 
                     </LinearLayout>
@@ -239,14 +232,14 @@
                             android:textColor="#000"
                             android:textStyle="bold"/>
 
-                        <TextView
+                        <EditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:id="@+id/profile_email"
+                            android:id="@+id/emailEditText"
                             android:textColor="#000"
-                            android:text="kratoswar@gmail.com" />
+                            android:hint="e.g kratoswar@gmail.com" />
 
 
                     </LinearLayout>
@@ -290,7 +283,7 @@
                             android:textSize="18dp"
                             android:textStyle="bold" />
 
-                        </LinearLayout>
+                    </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -322,10 +315,10 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1">
 
-                            <TextView
+                            <EditText
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/portfolio_text"
+                                android:hint="@string/portfolio_text"
                                 android:layout_gravity="center"
                                 android:textColor="#000"
                                 android:padding="16dp"/>
@@ -334,13 +327,17 @@
 
 
                     </LinearLayout>
-
-
-
-
-
-
-
+                    <Button
+                        android:id="@+id/userUpdateButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="24dp"
+                        android:text="Update"
+                        android:layout_gravity="center"
+                        android:background="@drawable/border"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
 
 
                 </LinearLayout>
@@ -357,8 +354,4 @@
 
     </ScrollView>
 
-
-
-
 </LinearLayout>
-

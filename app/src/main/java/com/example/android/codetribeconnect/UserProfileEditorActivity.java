@@ -65,7 +65,7 @@ public class UserProfileEditorActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_update_profile);
+        setContentView(R.layout.activityupdateprofile2);
         mDatabaseReference = FirebaseDatabase.getInstance().getReference().child("verified_user_profile");
         mStoragereference = FirebaseStorage.getInstance().getReference()
                 .child("verified_user_profile_photos");
